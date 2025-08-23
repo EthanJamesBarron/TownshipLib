@@ -1,6 +1,8 @@
 ﻿using MelonLoader;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,12 +32,11 @@ namespace TownshipLib
         {
             headless = GUILayout.Toggle(headless, "Headless?");
 
+            GUILayout.Label(Directory.GetCurrentDirectory());
+
             if (GUILayout.Button("Start Dedicated Server"))
             {
-                ApplicationStartupManager.AttemptServerStartAsync(new string[]
-                {
-                    "/start_server", "-1", "true", "5999"
-                });
+                Process.Start(Path.Combine(Directory.GetCurrentDirectory(), "A Township Tale"), $"/start_server -1 {headless} 5999");
             }
         }
     }
