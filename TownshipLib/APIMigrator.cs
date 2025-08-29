@@ -16,7 +16,7 @@ namespace TownshipLib
         [HarmonyPatch(typeof(ApiAccess), nameof(ApiAccess.StartApiAccess)), HarmonyPrefix]
         public static bool APIEndpointRedirect()
         {
-            ApiAccess.StartWithEndpoint("http://147.185.221.31:17891/");
+            ApiAccess.StartWithEndpoint("https://hyphaviper.crypticbren.com/");
             return false;
         }
     }
