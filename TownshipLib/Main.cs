@@ -23,11 +23,6 @@ namespace TownshipLib
             Logger = LoggerInstance;
         }
 
-        public override void OnUpdate()
-        {
-            
-        }
-
         public override void OnGUI()
         {
             headless = GUILayout.Toggle(headless, "Headless?");
@@ -36,7 +31,7 @@ namespace TownshipLib
 
             if (GUILayout.Button("Start Dedicated Server"))
             {
-                Process.Start(Path.Combine(Directory.GetCurrentDirectory(), "A Township Tale"), $"/start_server -1 {headless} 5999");
+                Process.Start(Path.Combine(Directory.GetCurrentDirectory(), "A Township Tale"), $"/start_server 1 {headless} 5999");
             }
         }
     }

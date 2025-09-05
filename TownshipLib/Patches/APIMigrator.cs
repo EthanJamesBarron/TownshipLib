@@ -8,7 +8,7 @@ using Alta.Api.DataTransferModels.Extensions;
 using HarmonyLib;
 using MelonLoader.Logging;
 
-namespace TownshipLib
+namespace TownshipLib.Patches
 {
     [HarmonyPatch]
     public static class APIMigrator

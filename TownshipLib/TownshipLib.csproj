@@ -34,9 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="APIMigrator.cs" />
+    <Compile Include="Patches\APIMigrator.cs" />
     <Compile Include="Main.cs" />
-    <Compile Include="NLogPatches.cs" />
+    <Compile Include="Patches\ConsoleExposer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
